@@ -187,9 +187,10 @@ def build_map(
         if original_route and original_route.get("coords"):
             coords = [c for c in original_route["coords"] if _is_valid(c[0]) and _is_valid(c[1])]
             if len(coords) >= 2:
+                # Thick Bold Solid Red for the blocked route
                 folium.PolyLine(
-                    locations=coords, color="#E24B4A", weight=6,
-                    opacity=0.9, dash_array="10 6",
+                    locations=coords, color="#E24B4A", weight=14,
+                    opacity=0.85,
                     tooltip=f" {original_route['name']} — BLOCKED",
                 ).add_to(m)
                 folium.Marker(
@@ -213,11 +214,13 @@ def build_map(
             coords     = [c for c in raw_coords if _is_valid(c[0]) and _is_valid(c[1])]
             if len(coords) < 2:
                 continue
+            
             is_forced = "Forced" in route.get("name", "")
             alt_col = "#E24B4A" if is_forced else alt_colours[i % len(alt_colours)]
 
+            # Detours are thinner and slightly transparent to show the red block underneath if they overlap
             folium.PolyLine(
-                locations=coords, color=alt_col, weight=6, opacity=0.90,
+                locations=coords, color=alt_col, weight=6, opacity=0.8,
                 dash_array="10 6" if is_forced else None,
                 tooltip=(
                     f" {route['name']} — {route['distance_km']} km · "

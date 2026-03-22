@@ -119,7 +119,7 @@ def _compute_routes(incident: dict) -> dict:
         nodes_to_block = [
             n for n, data in G.nodes(data=True)
             if n != origin_node and n != dest_node
-            and _haversine_m(inc_lat, inc_lng, data["y"], data["x"]) < 100
+            and _haversine_m(inc_lat, inc_lng, data["y"], data["x"]) < 300
         ]
         for n in nodes_to_block:
             if n in G_blocked:
