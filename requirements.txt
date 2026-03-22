@@ -1,0 +1,17 @@
+streamlit
+ultralytics
+opencv-python-headless
+pandas
+numpy
+folium
+streamlit-folium
+osmnx
+networkx
+requests
+python-dotenv
+Pillow
+shapely
+geopy
+google-api-python-client
+google-auth-oauthlib
+google-auth-httplib2
