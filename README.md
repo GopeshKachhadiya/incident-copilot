@@ -24,4 +24,4 @@ A high-performance command-center dashboard for traffic monitoring, incident det
 3. Set your API keys in `.env` (refer to `config.py` for variables).
 4. Run the dashboard: `streamlit run app.py`
 
-*Developed as part of Aetrix,PDEU Hackathon 2026.*s
+*Developed as part of Aetrix,PDEU Hackathon 2026.*
