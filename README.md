@@ -1,27 +1,27 @@
-# 🛡️ Incident Co-Pilot: Intelligent Traffic Management
+# Incident Copilot - Smart City Traffic Incident Management System
 
-A high-performance command-center dashboard for traffic monitoring, incident detection, and multi-agent emergency response. Built for Gandhinagar Smart City.
+LLM-powered multi-agent traffic incident co-pilot for Gandhinagar Smart City.
 
-## 🚀 Key Features
-- **YOLOv8-based Detection:** Real-time accident detection and classification.
-- **Multi-Agent Orchestration:** 
-  - **Signal Agent:** Dynamic intersection re-timing using Claude/Llama logic.
-  - **Diversion Agent:** A*-pathfinding for alternative route calculation.
-  - **Alerts Agent:** Public message generation (VMS, Social Media).
-  - **Dispatch Agent:** Automated emergency notification.
-  - **Chat Agent:** Natural language situational awareness.
-- **Interactive Map:** Folium-based visualization with congestion heatmaps and live routing.
+## Overview
+Incident Copilot is an AI-driven command-center dashboard for Gandhinagar Smart City. It integrates real-time traffic monitoring, incident detection via YOLOv8, and a multi-agent layer for diversion routing, signal re-timing, and public alerts.
 
-## 🛠️ Tech Stack
-- **Frontend:** Streamlit with custom Dark Modern CSS
-- **Detection:** Ultralytics (YOLOv8)
-- **Map:** Folium, OSMnx, NetworkX
-- **LLM:** HuggingFace Serverless / Gemini / Claude
-
-## 📦 Setup & Installation
-1. Clone the repository: `git clone https://github.com/GopeshKachhadiya/incident-copilot.git`
-2. Install dependencies: `pip install -r requirements.txt`
-3. Set your API keys in `.env` (refer to `config.py` for variables).
-4. Run the dashboard: `streamlit run app.py`
-
-*Developed as part of Aetrix,PDEU Hackathon 2026.*
+## Features
+* Multi-Agent Orchestration (signals, diversion, alerts, dispatch, chat)
+* * Real-Time Map Visualization (Folium)
+  * * A* Diversion Routing (osmnx + networkx)
+    * * Adaptive Signal Re-timing
+      * * Multi-Channel Alert Generation (VMS, Radio, Social Media)
+        * * Conversational Officer Chat (Google Gemini API)
+         
+          * ## Tech Stack
+          * * Frontend: Streamlit
+            * * Vision: YOLOv8, OpenCV
+              * * Mapping: Folium, osmnx
+                * * AI: Google Gemini API
+                  * * Language: Python 3.10+
+                   
+                    * ## Installation
+                    * 1. git clone https://github.com/GopeshKachhadiya/incident-copilot.git
+                      2. 2. pip install -r requirements.txt
+                         3. 3. streamlit run app.py
+                            4. 
